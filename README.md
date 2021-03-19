@@ -12,3 +12,4 @@ Mostly JSON compatible parser and writer with some modifications and extensions.
   * vec4
 
 * Tags
+* Colors
