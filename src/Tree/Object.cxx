@@ -1,8 +1,8 @@
 #include "Object.hxx"
 namespace GDN {
-	std::optional<Value> Object::get(const std::string & key){
+	std::optional<Value> Object::get(const std::string & key) const {
 		if(this->values.contains(key)){
-			return this->values[key];
+			return this->values.at(key);
 		}
 		else{
 			return std::optional<Value>();
