@@ -11,5 +11,5 @@ Custom JSON Parser and Writerr
   * vec3
   * vec4
 
-* Tags
+* Flags
 * Colors
