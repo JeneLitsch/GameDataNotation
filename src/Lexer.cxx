@@ -68,7 +68,7 @@ namespace GDN{
 		// 		this->error("Leading 0 not allowed in number: "  + this->getLexeme());
 		// 	}
 		// }
-		else if(matchNumeric()){
+		if(matchNumeric()){
 			while(this->matchNumeric());
 		}
 		//match fraction
