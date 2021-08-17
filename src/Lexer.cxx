@@ -61,13 +61,13 @@ namespace GDN{
 		bool flt = false;
 		match('-');
 
-		//match integer part
-		if(match('0')){
-			//catches leading 0
-			if(matchNumeric()){
-				this->error("Leading 0 not allowed in number: "  + this->getLexeme());
-			}
-		}
+		// //match integer part
+		// if(match('0')){
+		// 	//catches leading 0
+		// 	if(matchNumeric()){
+		// 		this->error("Leading 0 not allowed in number: "  + this->getLexeme());
+		// 	}
+		// }
 		else if(matchNumeric()){
 			while(this->matchNumeric());
 		}
