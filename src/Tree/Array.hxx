@@ -6,7 +6,7 @@ namespace GDN {
 	class Array : public Node {
 	public:
 		std::size_t size() const;
-		Value get(std::size_t idx) const;
+		const Value & get(std::size_t idx) const;
 		void add(Value val);
 		
 		virtual void accept(Visitor & visitor) override;

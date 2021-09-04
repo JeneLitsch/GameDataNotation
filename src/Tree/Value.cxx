@@ -94,23 +94,40 @@ namespace GDN {
 		}
 	}
 
-	std::shared_ptr<Object> Value::getObject()const{
+	const Object * Value::getObject()const{
 		if(auto val = std::get_if<std::shared_ptr<Object>>(&this->value)){
-			return *val;
+			return val->get();
 		}
 		else{
 			return nullptr;
 		}
 	}
 
-	std::shared_ptr<Array> Value::getArray()const{
+	const Array * Value::getArray()const{
 		if(auto val = std::get_if<std::shared_ptr<Array>>(&this->value)){
-			return *val;
+			return val->get();
 		}
 		else{
 			return nullptr;
 		}
 	}
 
+	Object * Value::getObject() {
+		if(auto val = std::get_if<std::shared_ptr<Object>>(&this->value)){
+			return val->get();
+		}
+		else{
+			return nullptr;
+		}
+	}
+
+	Array * Value::getArray() {
+		if(auto val = std::get_if<std::shared_ptr<Array>>(&this->value)){
+			return val->get();
+		}
+		else{
+			return nullptr;
+		}
+	}
 
 }

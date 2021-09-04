@@ -6,7 +6,7 @@ namespace GDN{
 	class Object : public Node {
 	public:
 		Object(){}
-		std::optional<Value> get(const std::string & key) const ;
+		const Value * get(const std::string & key) const ;
 		void set(const std::string & key, Value val);
 		virtual void accept(Visitor & visitor) override;
 		std::string keys() const;

@@ -45,12 +45,12 @@ namespace GDN {
 
 		//add object to str
 		else if(auto content = val.getObject()){
-			(*content).accept(*this);
+			content->accept(*this);
 		}
 
 		//add array to str
 		else if(auto content = val.getArray()){
-			(*content).accept(*this);
+			content->accept(*this);
 		}
 
 		// TODO add hex and bin

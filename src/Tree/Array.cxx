@@ -4,7 +4,7 @@ namespace GDN {
 	std::size_t Array::size() const{
 		return this->values.size();
 	}
-	Value Array::get(std::size_t idx) const{
+	const Value & Array::get(std::size_t idx) const{
 		return this->values[idx];
 	}
 	void Array::add(Value val){
